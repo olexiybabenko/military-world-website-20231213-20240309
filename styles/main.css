@@ -1,0 +1,17 @@
+.background-olive {
+  background-color: olive;
+}
+.background-light-olive {
+  background-color: rgb(252, 252, 239);
+}
+
+.color-white {
+  color: white;
+}
+
+.flex-gap-10 {
+  gap: 10px;
+}
+.flex-gap-0 {
+  gap: 0px;
+}/*# sourceMappingURL=main.css.map */

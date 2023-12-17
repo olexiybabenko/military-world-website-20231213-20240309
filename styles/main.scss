@@ -1,0 +1,36 @@
+// Backgroung colors
+.background {
+    &-olive {
+        background-color: olive;
+    }
+
+    &-light-olive {
+        background-color: rgb(252, 252, 239);
+    }
+}
+
+// Color
+
+.color {
+    &-white {
+        color: white;
+    }
+}
+
+// Gaps
+.flex-gap {
+    &-10 {
+        gap: 10px;
+    }
+
+    &-0 {
+        gap: 0px;
+    }
+}
+
+// Margins
+// Large devices (desktops, 992px and up)
+
+.mt-md-d-3 {
+    margin-top: 50px;
+}

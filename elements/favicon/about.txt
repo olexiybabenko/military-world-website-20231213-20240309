@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Shanti
+- Font Author: Copyright 2011 The Shanti Project Authors (https://github.com/googlefonts/ShantiFont)
+- Font Source: http://fonts.gstatic.com/s/shanti/v25/t5thIREMM4uSDgzgU0ezpKfwzA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
