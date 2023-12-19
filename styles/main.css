@@ -1,6 +1,7 @@
 .background-olive {
   background-color: olive;
 }
+
 .background-light-olive {
   background-color: rgb(252, 252, 239);
 }
@@ -12,6 +13,9 @@
 .flex-gap-10 {
   gap: 10px;
 }
+
 .flex-gap-0 {
   gap: 0px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
