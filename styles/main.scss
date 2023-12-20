@@ -1,25 +1,22 @@
 // Backgroung colors
 .background {
     &-olive {
-        background-color: olive;
+        background-color: olive !important;
     }
 
     &-light-olive {
-        background-color: rgb(252, 252, 239);
+        background-color: rgb(252, 252, 239) !important;
+    }
+
+    &-very-light-olive {
+        background-color: rgb(252, 252, 239) !important;
     }
 
     &-grey {
-        background-color: rgb(124, 124, 124);
+        background-color: rgb(124, 124, 124) !important;
     }
 }
 
-// Color
-
-.color {
-    &-white {
-        color: white;
-    }
-}
 
 // Gaps
 .flex-gap {
