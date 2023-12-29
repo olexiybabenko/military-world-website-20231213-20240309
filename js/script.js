@@ -1,3 +1,1 @@
-// POPULATE DOM
-// 1. Navbar
-// Create navbar
+// Swiper mechanics
