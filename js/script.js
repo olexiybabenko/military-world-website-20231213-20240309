@@ -4,7 +4,7 @@ let products_list = JSON.parse(products_list_json);
 console.log(products_list.length)
 
 // 2. FILL THE SWIPERS  
-// 1) Main page: Sales swiper
+// 1) Main page
 const fillSwiper = () => {
     // For each product in the list
     for (let i = 0; i < products_list.length; i++) {
@@ -18,17 +18,19 @@ const fillSwiper = () => {
                 <div class="card-body">
                     <h6 class="card-title">${products_list[i].name.split(' ').slice(0, 2).join(' ')}</h6>
                     <p class="card-text">$${products_list[i].price}</p>
-                    <a href="#" class="btn btn-dark background-olive btn-outline-light">Buy</a>
+                    <button class="btn btn-dark background-olive btn-outline-light btn-buy">Buy</button>
                 </div>
             </div>`;
 
         // Append swiperSlide to Swiper
-        // if it is "sales" section
         if (products_list[i].sales === "true") {
+            // if it is "sales" section
             document.getElementById("homeSalesSwiper").appendChild(swiperSlide);
         } else if (products_list[i].news === "true") {
+            // if it is "news" section
             document.getElementById("homeNewsSwiper").appendChild(swiperSlide);
         } else if (products_list[i].bestsellers === "true") {
+            // if it is "bestsellers" section
             document.getElementById("homeBestsellersSwiper").appendChild(swiperSlide);
         }
     }
@@ -37,4 +39,31 @@ const fillSwiper = () => {
 // Run function
 fillSwiper()
 
+
+// 3. SHOPPING CART
+// 1) Add items to cart icon
+// Define number of items
+let numOfItems = 0;
+// Define function
+const cartIconItem = () => {
+    // Change number in inner html
+    for (let i = 0; i < document.getElementsByClassName("shopping-cart").length; i++) {
+        document.getElementsByClassName("shopping-cart")[i].innerHTML = numOfItems;
+    }
+};
+// Run function
+cartIconItem();
+
+// 2) On button buy click - add item to shopping cart
+// Select all buy button
+const buyButtons = document.querySelectorAll('.btn-buy');
+// Define function
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Increase number of products in cart by 1
+        numOfItems = numOfItems + 1;
+        // Update shopping cart icon
+        cartIconItem();
+    });
+});
 
