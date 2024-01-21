@@ -107,6 +107,10 @@
     </nav>
 
 
+    <!-- Fade modals - they are invisible until customer clicks on buy button of the product -->
+    <div id="fadeModals"></div>
+
+
     <!-- Main screen -->
     <div class="container-xl px-3 px-md-5" style="max-width: 100%;">
         <!-- Categories section -->
@@ -204,10 +208,10 @@
     <!-- Modal: Add to cart message -->
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-dark background-olive btn-outline-light btn-buy" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
         Launch demo modal
     </button>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -217,18 +221,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-evenly">
-                    <img src="../images/products/product_1.webp" class="card-width border border-secondary"
-                        style="--bs-border-opacity: .5;" alt="Product image">
                     <div class="">
+                        <img src="../images/products/product_1.webp"
+                            class="card-width border border-secondary border-opacity-50" alt="Product image">
+                        <p class="fw-light text-danger" data-bs-dismiss="modal">Remove item</p>
+                    </div>
+                    <div class="ms-2">
                         <h6>Product name</h6>
                         <p>$99</p>
+                        <div class="d-flex gap-1">
+                            <input id="ItemQuantity" type="number" class="form-control form-control-sm rounded"
+                                value="1" aria-label="ItemQuantity">
+                            <select class="form-select form-select-sm" aria-label="Default select example">
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <h5>Total:</h5>
                     <h5>$99</h5>
                 </div>
-                <div class="d-flex justify-content-center pb-4">
+                <div class="d-flex justify-content-center gap-1 pb-4">
+                    <button type="button" class="btn btn-secondary text-capitalize" data-bs-dismiss="modal">more
+                    </button>
                     <button type="button"
                         class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</button>
                 </div>
