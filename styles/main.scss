@@ -42,6 +42,17 @@
     }
 }
 
+// Product image width
+.product-img-width {
+    width: 14rem !important;
+}
+
+@media screen and (min-width: 768px) {
+    .product-img-width {
+        width: 20rem !important;
+    }
+}
+
 // Swiper
 .swiper {
     width: 100%;
