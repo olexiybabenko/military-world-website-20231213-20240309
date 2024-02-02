@@ -1,7 +1,7 @@
 // Backgroung colors
 .background {
     &-olive {
-        background-color: olive !important;
+        background-color: rgb(128, 128, 0) !important;
     }
 
     &-light-olive {
@@ -20,16 +20,22 @@
     }
 }
 
-// Gaps
-.flex-gap {
-    &-10 {
-        gap: 10px;
-    }
-
-    &-0 {
-        gap: 0px;
-    }
+// Focus color
+.focus-color-olive {
+    --bs-focus-ring-color: rgba(128, 128, 0, 0.25) !important;
 }
+
+.focus-color-olive:focus {
+    border-color: rgba(128, 128, 0, 0.5) !important;
+}
+
+// Select color
+option:checked,
+option:hover {
+    background-color: rgba(128, 128, 0, 0.5) !important;
+    color: white !important;
+}
+
 
 // Card width
 .card-width {
@@ -52,6 +58,12 @@
         width: 20rem !important;
     }
 }
+
+// Field width
+.field-width {
+    max-width: 10rem !important;
+}
+
 
 // Swiper
 .swiper {
