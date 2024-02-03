@@ -1,4 +1,4 @@
-// JS CODE FOR THE MAIN PAGE
+// JS CODE THAT DEFINES FUNCTIONS USED ON THE OTHER PAGES
 // DATA IMPORT
 import products_list from "./products-list.js"; // Parsed json with the list of products
 import swiper from "./swiper.js"; // Import swiper object - it is required to fill them
@@ -49,7 +49,7 @@ const fillSwiper = (filter, filterData, swiperId) => {
                         <div>
                             <img src="${products_list[i].img}"
                                 class="card-width border border-secondary border-opacity-50" alt="Product image">
-                            <p class="fw-light text-danger" data-bs-dismiss="modal">Remove item</p>
+                            <p class="fw-light text-danger remove-item" data-bs-dismiss="modal">Remove item</p>
                         </div>
                         <div class="ms-2">
                             <h6>${products_list[i].name}</h6>
@@ -84,11 +84,6 @@ const fillSwiper = (filter, filterData, swiperId) => {
     }
 };
 
-// Run function
-fillSwiper("news", "true", "homeNewsSwiper")
-fillSwiper("sales", "true", "homeSalesSwiper")
-fillSwiper("bestsellers", "true", "homeBestsellersSwiper")
-
 
 // 3. SHOPPING CART
 // 1) Add items to cart icon
@@ -101,23 +96,36 @@ const cartIconItem = () => {
         document.getElementsByClassName("shopping-cart")[i].innerHTML = numOfItems;
     }
 };
-// Run function
-cartIconItem();
-
 
 // 2) On button buy click - add item to shopping cart
-// Select all buy button
-const buyButtons = document.querySelectorAll('.btn-buy');
-// Define function
-buyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Increase number of products in cart by 1
-        numOfItems = numOfItems + 1;
-        // Update shopping cart icon
-        cartIconItem();
+const addItemToCart = () => {
+    // Select all buy button
+    let buyButtons = document.querySelectorAll('.btn-buy');
+    // Define function
+    buyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Increase number of products in cart by 1
+            numOfItems = numOfItems + 1;
+            // Update shopping cart icon
+            cartIconItem();
+        });
     });
-});
+};
 
+// 3) Remove item from shopping cart
+const removeItemFromCart = () => {
+    // Select all buy button
+    let removeButtons = document.querySelectorAll('.remove-item');
+    // Define function
+    removeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Decrease number of products in cart by 1
+            numOfItems = numOfItems - 1;
+            // Update shopping cart icon
+            cartIconItem();
+        });
+    });
+};
 
 // EXPORT FUNCTIONS
-export default fillSwiper;
+export { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart };
