@@ -11,6 +11,6 @@ window.addEventListener('load', (event) => {
     // Set number of items in the shopping cart icon
     cartIconItem();
     // Add functionallity of buttons
-    addItemToCart(); // add it
-    removeItemFromCart();
+    addItemToCart(); // add item to cart on buy-button click
+    removeItemFromCart(); // remove item from cart on remove-button click
 });

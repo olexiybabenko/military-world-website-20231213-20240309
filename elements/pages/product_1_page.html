@@ -113,125 +113,17 @@
     <div id="fadeModals"></div>
 
 
+    <!-- Page id - required to map the product id and later fill the page -->
+    <div id="productNumber" class="d-none">0</div>
+
+
     <!-- Main screen -->
     <div class="container-xxl px-3 px-md-5" style="max-width: 100%;">
         <!-- Product section -->
-        <div id="productPageMainSection" class="container-xxl px-0 px-xl-3 pt-3 pb-4">
-            <!-- Breadcrumb -->
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
-                aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="link-secondary text-decoration-none"
-                            href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="#">Category</a>
-                    </li>
-                    <li class="breadcrumb-item text-secondary">Product name</li>
-                </ol>
-            </nav>
-
-            <!-- Product elements -->
-            <!-- One column up to md -->
-            <div class="d-block d-md-none">
-                <h1 class="text-center pb-2">Product name</h1>
-                <div class="d-flex justify-content-center pb-2">
-                    <img src="../images/products/product_1.webp"
-                        class="product-img-width border border-secondary border-opacity-50 mx-auto mx-md-0"
-                        alt="Product image">
-                </div>
-                <p class="text-center">Reviews (10):
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-half text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
-                </p>
-            </div>
-            <!-- Two columns from md -->
-            <div class="d-flex justify-content-around gap-5">
-                <!-- Column 1 -->
-                <div class="d-none d-md-block">
-                    <img src="../images/products/product_1.webp"
-                        class="product-img-width border border-secondary border-opacity-50 mx-auto mx-md-0 "
-                        alt="Product image">
-                    <p class="text-center">Reviews (10):
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-half text-warning"></i>
-                        <i class="bi bi-star text-warning"></i>
-                    </p>
-                </div>
-                <!-- Column 2 -->
-                <div>
-                    <h1 class="pb-2 d-none d-md-block">Product name</h1>
-                    <p>$ 99</p>
-                    <div class="d-flex gap-1">
-                        <input id="ItemQuantity" type="number"
-                            class="form-control form-control-sm rounded field-width focus-ring focus-color-olive"
-                            value="1" aria-label="ItemQuantity">
-                        <select class="form-select form-select-sm field-width focus-ring focus-color-olive"
-                            aria-label="product size">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                        <button id="-buy-btn" class="btn btn-dark background-olive btn-outline-light btn-buy"
-                            data-bs-toggle="modal" data-bs-target="-modal">Buy</button>
-                    </div>
-                    <!-- Accordtion with description -->
-                    <div class="accordion accordion-flush pt-3" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-body-tertiary focus-ring focus-color-olive"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                    Description
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    The Smock military jacket returns in an improved version. The SAS Smock jacket is
-                                    zipped along the entire length with a zipper. The sweatshirt is made entirely of
-                                    Duracanvas
-                                    material, which can be waxed, which increases protection against light rain and
-                                    snow.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-body-tertiary focus-ring focus-color-olive"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    Details
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    Technical details
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-body-tertiary focus-ring focus-color-olive"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    Comments
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    Placeholder for comments
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Related products -->
+        <div id="productPageMainSection" class="container-xxl px-0 px-xl-3 pt-3 pb-1">
+        </div>
+        <!-- Related products -->
+        <div class="container-xxl px-0 px-xl-3 pb-4">
             <h1 class="pt-5 pb-2 text-center">Related products</h1>
             <!-- Swiper: Related products -->
             <div class="swiper mb-2">

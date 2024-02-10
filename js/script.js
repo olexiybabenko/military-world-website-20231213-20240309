@@ -4,8 +4,9 @@ import products_list from "./products-list.js"; // Parsed json with the list of 
 import swiper from "./swiper.js"; // Import swiper object - it is required to fill them
 
 
-// 2. FILL THE SWIPERS  
-// 1) Main page
+// 2. FILL THE SWIPERS
+
+// 2) Main page
 const fillSwiper = (filter, filterData, swiperId) => {
     // For each product in the list
     for (let i = 0; i < products_list.length; i++) {
@@ -19,7 +20,7 @@ const fillSwiper = (filter, filterData, swiperId) => {
                 <img src="${products_list[i].img}"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h6 class="card-title">${products_list[i].name.split(' ').slice(0, 2).join(' ')}</h6>
+                    <a href=${"../pages/" + products_list[i].id + "_page.html"} class="card-title text-decoration-none">${products_list[i].name.split(' ').slice(0, 2).join(' ')}</a>
                     <p class="card-text">$${products_list[i].price}</p>
                     <!-- Button trigger modal -->
                     <button id=${products_list[i].id + "-buy-btn"} class="btn btn-dark background-olive btn-outline-light btn-buy" data-bs-toggle="modal" data-bs-target=${"#" + products_list[i].id + "-modal"}>Buy</button>
@@ -52,7 +53,7 @@ const fillSwiper = (filter, filterData, swiperId) => {
                             <p class="fw-light text-danger remove-item" data-bs-dismiss="modal">Remove item</p>
                         </div>
                         <div class="ms-2">
-                            <h6>${products_list[i].name}</h6>
+                            <a href=${"../pages/" + products_list[i].id + "_page.html"} class="card-title text-decoration-none">${products_list[i].name}</a>
                             <p>$${products_list[i].price}</p>
                             <div class="d-flex gap-1">
                                 <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded"
