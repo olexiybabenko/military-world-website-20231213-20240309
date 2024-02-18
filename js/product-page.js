@@ -1,6 +1,6 @@
 // DATA IMPORT
 import products_list from "./products-list.js"; // Parsed json with the list of products
-import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart } from "./script.js";
+import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
 
 // Map product id from the html page
 let i = document.getElementById("productNumber").innerHTML;
@@ -15,7 +15,7 @@ const fillProductPage = () => {
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="link-secondary text-decoration-none"
                         href="./index.html">Home</a></li>
-                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="#">Category</a>
+                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none text-capitalize" href=${"./" + products_list[i].category + ".html"}>${products_list[i].category}</a>
                 </li>
                 <li class="breadcrumb-item text-secondary">${products_list[i].name}</li>
             </ol>
@@ -148,4 +148,5 @@ window.addEventListener('load', (event) => {
     // Add functionallity of buttons
     addItemToCart(); // add item to cart on buy-button click
     removeItemFromCart(); // remove item from cart on remove-button click
+    searchProducts(); // add search products function
 });

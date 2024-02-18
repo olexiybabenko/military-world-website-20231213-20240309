@@ -128,5 +128,40 @@ const removeItemFromCart = () => {
     });
 };
 
+
+// 4) Search function
+const searchProducts = () => {
+    // Add event listener: on searchButton click -> search the products_list
+    document.getElementById('searchButton').addEventListener('click', () => {
+        // Choose the value of the form
+        let word = document.getElementById("searchFieldText").value;
+        word = word.toUpperCase(); // Capitalize the searched word
+        // Create an empty list
+        let filteredProducts = [];
+        // If product name contains the searched word -> append it to the list
+        for (let i = 0; i < products_list.length; i++) {
+            if (products_list[i].name.toUpperCase().includes(word)) {
+                filteredProducts = [...filteredProducts, products_list[i]];
+            }
+        }
+        // Return the list of the products that have this word
+        document.getElementById('searchResultsDropdown').innerHTML = ``; // clear ul the list
+        // If there are records found
+        if (filteredProducts.length > 0) {
+            // for each filtered product
+            for (let i = 0; i < filteredProducts.length; i++) {
+                let li = document.createElement("li"); // create the list element 
+                li.innerHTML = `<a class="dropdown-item" href=${"./" + filteredProducts[0].id + "_page.html"}>${filteredProducts[i].name}</a>`;
+                document.getElementById('searchResultsDropdown').appendChild(li);
+            }
+        } else {
+            // if the list is empty
+            let li = document.createElement("li"); // create the list element 
+            li.innerHTML = `<a class="dropdown-item">No records found</a>`;
+            document.getElementById('searchResultsDropdown').appendChild(li);
+        }
+    });
+};
+
 // EXPORT FUNCTIONS
-export { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart };
+export { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart, searchProducts };

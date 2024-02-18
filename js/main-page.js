@@ -1,6 +1,6 @@
 // THIS IS JS THAT ACTIVATES FUNCTIONS ON THE MAIN PAGE
 // DATA IMPORT
-import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart } from "./script.js";
+import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
 
 // Activate functions on page load
 window.addEventListener('load', (event) => {
@@ -13,4 +13,5 @@ window.addEventListener('load', (event) => {
     // Add functionallity of buttons
     addItemToCart(); // add item to cart on buy-button click
     removeItemFromCart(); // remove item from cart on remove-button click
+    searchProducts(); // add search products function
 });
