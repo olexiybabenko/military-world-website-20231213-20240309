@@ -3,7 +3,7 @@ import products_list from "./products-list.js"; // Parsed json with the list of 
 import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
 
 // Map product id from the html page
-let i = document.getElementById("productNumber").innerHTML;
+let i = document.getElementById("productNumber").innerHTML - 1;
 
 // CREATE A FUNCTION TO FILL THE PRODUCT PAGE
 const fillProductPage = () => {
