@@ -5,7 +5,6 @@ import swiper from "./swiper.js"; // Import swiper object - it is required to fi
 
 
 // 2. FILL THE SWIPERS
-
 // 2) Main page
 const fillSwiper = (filter, filterData, swiperId) => {
     // For each product in the list

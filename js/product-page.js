@@ -7,6 +7,8 @@ let i = document.getElementById("productNumber").innerHTML - 1;
 
 // CREATE A FUNCTION TO FILL THE PRODUCT PAGE
 const fillProductPage = () => {
+    // Change the page's title
+    document.title = `${products_list[i].name}`;
     // Fill the inner html of productPageMainSection
     document.getElementById("productPageMainSection").innerHTML = `
         <!-- Breadcrumb -->

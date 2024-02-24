@@ -2,6 +2,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs' // Import Swiper from Swiper API
 
 // 1. CREATE AND CONFIGURE SWIPERS
+// Horizontal swiper
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -52,6 +53,7 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
+
 
 // Export swiper object to other files
 export default swiper;
