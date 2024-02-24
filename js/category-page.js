@@ -1,11 +1,14 @@
 // THIS IS JS THAT ACTIVATES FUNCTIONS ON THE MAIN PAGE
 // DATA IMPORT
-import { fillSwiper, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
+import { fillGrid, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
+
+// Select category
+let categoryName = document.getElementById("categoryName").innerHTML;
 
 // Activate functions on page load
 window.addEventListener('load', (event) => {
-    // Fill swipers
-    // fillSwiper("news", "true", "homeNewsSwiper");
+    // Fill grid
+    fillGrid("category", categoryName, "categoryProductGrid");
     // Set number of items in the shopping cart icon
     cartIconItem();
     // Add functionallity of buttons

@@ -120,33 +120,43 @@
 
 
     <!-- Main screen -->
-    <div class="container-xl px-3 px-md-5" style="max-width: 100%;">
-        <!-- ? -->
-        <div class="text-center pt-3 pb-4">
-            <a class="link-dark text-decoration-none" href="./news.html">
-                <h1>Clothing</h1>
-            </a>
-            <!-- Products section -->
-
-            <!-- Pagination -->
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link text-secondary" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link text-secondary" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link text-secondary" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link text-secondary" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link text-secondary" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="container-xl px-3 px-md-5 pt-3 pb-3" style="max-width: 100%;">
+        <!-- Page name -->
+        <h1 id="categoryName" class="text-center text-capitalize mb-0">clothing</h1>
+        <!-- Filter -->
+        <div class="d-grid gap-2 col-11 col-sm-6 col-md-4 col-xl-3 mx-auto">
+            <select id="sort-form" class="form-select  focus-ring focus-color-olive mt-3 text-center"
+                aria-label="product size">
+                <option value="byDefault">Most popular</option>
+                <option value="byNameAsc">Sort by name - ascending</option>
+                <option value="byNameDesc">Sort by name - descending</option>
+                <option value="byPriceAsc">Sort by price - ascending</option>
+                <option value="byPriceDesc">Sort by price - descending</option>
+            </select>
+            <button id="sort-button" class="btn btn-dark background-olive btn-outline-light">Filter</button>
         </div>
+        <!-- Products section -->
+        <div class="container pt-4">
+            <div id="categoryProductGrid"
+                class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-3 g-lg-4 justify-content-center mx-auto">
+            </div>
+        </div>
+        <!-- Pagination -->
+        <nav class="pt-3" aria-label="Page navigation example">
+            <ul id="pagination" class="pagination pagination-sm justify-content-center">
+                <li class="page-item">
+                    <a class="page-link text-secondary" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link text-secondary" href="#">1</a></li>
+                <li class="page-item">
+                    <a class="page-link text-secondary" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <!-- Footer -->
@@ -160,7 +170,8 @@
                         </li>
                         <li class="nav-item mb-2"><a href="./news.html" class="nav-link p-0 text-muted">News</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="./products.html" class="nav-link p-0 text-muted">Products</a>
+                        <li class="nav-item mb-2"><a href="./bestsellers.html"
+                                class="nav-link p-0 text-muted">Bestsellers</a>
                         </li>
                         <li class="nav-item mb-2"><a href="./sales.html" class="nav-link p-0 text-muted">Sales</a>
                         </li>
