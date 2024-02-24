@@ -85,15 +85,15 @@ const fillSwiper = (filter, filterData, swiperId) => {
 };
 
 // 2) Category product grids
-const fillGrid = (filter, filterData, swiperId) => {
+const fillGrid = (filter, filterData, gridId) => {
     // For each product in the list
     for (let i = 0; i < products_list.length; i++) {
-        // If the product's value of "filter" equals to "filterData", append it to the "swiperId"
+        // If the product's value of "filter" equals to "filterData", append it to the "gridId"
         if (products_list[i][filter] === filterData) {
             // 1. Create an html card
-            let swiperSlide = document.createElement('div');
-            swiperSlide.setAttribute("class", "col"); //add swiper-slide class so that swiper functionality works 
-            swiperSlide.innerHTML = `
+            let gridSlide = document.createElement('div');
+            gridSlide.setAttribute("class", "col"); //add swiper-slide class so that swiper functionality works 
+            gridSlide.innerHTML = `
             <div class="card h-100 bg-light border-secondary card-width text-center">
                 <img src="${products_list[i].img}"
                     class="card-img-top" alt="...">
@@ -104,8 +104,8 @@ const fillGrid = (filter, filterData, swiperId) => {
                     <button id=${products_list[i].id + "-buy-btn"} class="btn btn-dark background-olive btn-outline-light btn-buy" data-bs-toggle="modal" data-bs-target=${"#" + products_list[i].id + "-modal"}>Buy</button>
                 </div>
             </div>`;
-            // Append swiperSlide to Swiper
-            document.getElementById(swiperId).appendChild(swiperSlide);
+            // Append gridSlide to Grid
+            document.getElementById(gridId).appendChild(gridSlide);
 
             // 2. Create fade modal for each card
             let fadeModal = document.createElement('div');
