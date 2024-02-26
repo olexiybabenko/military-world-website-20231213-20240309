@@ -19,10 +19,38 @@ const sortProduct = () => {
                 return a.name.localeCompare(b.name);
             }
             // Sort products_list by name
-            document.getElementById("categoryProductGrid").innerHTML = ``; // clean the previos list
             products_list.sort(compareByName);
+        } else if (sortCriteria === "byNameDesc") {
+            // Compare by Name function
+            let compareByName = (a, b) => {
+                return a.name.localeCompare(b.name);
+            }
+            // Sort products_list by price
+            products_list.sort(compareByName).reverse();
+        } else if (sortCriteria === "byPriceAsc") {
+            // Compare by Price function
+            let compareByPrice = (a, b) => {
+                return a.price - b.price;
+            }
+            // Sort products_list by name descending
+            products_list.sort(compareByPrice);
+        } else if (sortCriteria === "byPriceDesc") {
+            // Compare by Price function
+            let compareByPrice = (a, b) => {
+                return a.price - b.price;
+            }
+            // Sort products_list by proce descending
+            products_list.sort(compareByPrice).reverse();
+        } else if (sortCriteria === "byDefault") {
+            // Compare by default function
+            let compareById = (a, b) => {
+                return a.id.localeCompare(b.id);
+            }
+            // Sort products_list by default
+            products_list.sort(compareById);
         };
         // Fill the grid
+        document.getElementById("categoryProductGrid").innerHTML = ``; // clean the previos list
         fillGrid("category", categoryName, "categoryProductGrid");
     })
 };
