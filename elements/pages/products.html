@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Clothing</title>
+    <title>Military World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../styles/main.css">
     <!-- Bootstrap -->
@@ -120,44 +120,49 @@
 
 
     <!-- Main screen -->
-    <div class="container-xl px-3 px-md-5 pt-3 pb-3" style="max-width: 100%;">
-        <!-- Page name -->
-        <h1 id="categoryName" class="text-center text-capitalize mb-0">Clothing</h1>
-        <!-- Filter -->
-        <div class="d-grid gap-2 col-11 col-sm-6 col-md-4 col-xl-3 mx-auto">
-            <select id="sortForm" class="form-select  focus-ring focus-color-olive mt-3 text-center"
-                aria-label="product size">
-                <option value="byDefault">Most popular</option>
-                <option value="byNameAsc">Sort by name - ascending</option>
-                <option value="byNameDesc">Sort by name - descending</option>
-                <option value="byPriceAsc">Sort by price - ascending</option>
-                <option value="byPriceDesc">Sort by price - descending</option>
-            </select>
-            <button id="sortButton" class="btn btn-dark background-olive btn-outline-light">Filter</button>
-        </div>
-        <!-- Products section -->
-        <div class="container pt-4">
-            <div id="categoryProductGrid"
-                class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-3 g-lg-4 justify-content-center mx-auto">
+    <div class="container-xl px-3 px-md-5" style="max-width: 100%;">
+        <!-- Categories section -->
+        <div class="pt-3 pb-4">
+            <div class="text-center">
+                <a class="link-dark text-decoration-none" href="./categories.html">
+                    <h1 class="mb-2 mb-md-3">Categories</h1>
+                </a>
+                <div class="d-flex justify-content-center flex-wrap gap-1 gap-md-2 gap-lg-3 px-lg-3">
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0 text-nowrap" href="./clothing.html">Clothing</a>
+                        <img src="../images/categories/category-clothing.webp" class="card-img-bottom rounded-bottom"
+                            alt="...">
+                    </div>
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0 text-nowrap" href="./shoes.html">Shoes</a>
+                        <img src="../images/categories/category-shoes.webp"
+                            class="card-img-bottom rounded-bottom mw-100" alt="...">
+                    </div>
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0" href="./outdoor.html">Outdoor</a>
+                        <img src="../images/categories/category-outdoor.webp" class="card-img-bottom rounded-bottom"
+                            alt="...">
+                    </div>
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0" href="./safety.html">Safety</a>
+                        <img src="../images/categories/category-safety.webp" class="card-img-bottom rounded-bottom"
+                            alt="...">
+                    </div>
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0" href="./equipment.html">Equipment</a>
+                        <img src="../images/categories/category-equipment.webp" class="card-img-bottom rounded-bottom"
+                            alt="...">
+                    </div>
+                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
+                        <a class="card-title text-decoration-none py-0" href="./shooting.html">Shooting</a>
+                        <img src="../images/categories/category-shooting.webp" class="card-img-bottom rounded-bottom"
+                            alt="...">
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Pagination -->
-        <nav class="pt-3" aria-label="Page navigation example">
-            <ul id="pagination" class="pagination pagination-sm justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-secondary" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link text-secondary" href="#">1</a></li>
-                <li class="page-item">
-                    <a class="page-link text-secondary" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
 
     <!-- Footer -->
     <div class="bg-secondary g-0">
@@ -166,15 +171,12 @@
                 <div class="col-12 col-sm-6 col-md-2 mb-3 text-center text-sm-start">
                     <h5 class="text-light">Military World</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-muted">Home</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="./news.html" class="nav-link p-0 text-muted">News</a>
-                        </li>
+                        <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="./news.html" class="nav-link p-0 text-muted">News</a></li>
                         <li class="nav-item mb-2"><a href="./bestsellers.html"
                                 class="nav-link p-0 text-muted">Bestsellers</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="./sales.html" class="nav-link p-0 text-muted">Sales</a>
-                        </li>
+                        <li class="nav-item mb-2"><a href="./sales.html" class="nav-link p-0 text-muted">Sales</a></li>
                     </ul>
                 </div>
 
@@ -183,8 +185,7 @@
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="./clothing.html" class="nav-link p-0 text-muted">Clothing</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="./shoes.html" class="nav-link p-0 text-muted">Shoes</a>
-                        </li>
+                        <li class="nav-item mb-2"><a href="./shoes.html" class="nav-link p-0 text-muted">Shoes</a></li>
                         <li class="nav-item mb-2"><a href="./outdoor.html" class="nav-link p-0 text-muted">Outdoor</a>
                         </li>
                         <li class="nav-item mb-2"><a href="./safety.html" class="nav-link p-0 text-muted">Safety</a>
@@ -204,8 +205,7 @@
                                 us</a></li>
                         <li class="nav-item mb-2"><a href="./information.html"
                                 class="nav-link p-0 text-muted">Contact</a></li>
-                        <li class="nav-item mb-2"><a href="./information.html" class="nav-link p-0 text-muted">Terms
-                                and
+                        <li class="nav-item mb-2"><a href="./information.html" class="nav-link p-0 text-muted">Terms and
                                 conditions</a>
                         </li>
                         <li class="nav-item mb-2"><a href="./information.html"
@@ -262,7 +262,7 @@
 
 
     <!-- js file -->
-    <script type="module" src="../../js/category-page.js"></script>
+    <script type="module" src="../../js/products-page.js"></script>
     <!-- Bootstrap required elements -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

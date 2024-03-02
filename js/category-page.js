@@ -3,8 +3,34 @@
 import { fillGrid, cartIconItem, addItemToCart, removeItemFromCart, searchProducts } from "./script.js";
 import products_list from "./products-list.js"; // Parsed json with the list of products
 
-// Select category
-let categoryName = document.getElementById("categoryName").innerHTML;
+// Change the title of the page
+document.title = document.getElementById("categoryName").innerHTML;
+
+// Set global variables used for filling the page
+let categoryName = document.getElementById("categoryName").innerHTML.toLowerCase(); // Select category based on which grid will be filled
+let filteredClass = "";
+let filteredValue = categoryName;
+
+// Select category function
+const selectCategory = () => {
+    // Based on categoryName select what filter in JSON will be used
+    if (categoryName === "clothing" || categoryName === "shoes" || categoryName === "outdoor" || categoryName === "safety" || categoryName === "equipment" || categoryName === "shooting") {
+        // Set the searched value to category
+        filteredClass = "category"
+    } else if (categoryName === "news") {
+        // Set the searched value to news
+        filteredClass = "news";
+        filteredValue = "true";
+    } else if (categoryName === "bestsellers") {
+        // Set the searched value to news
+        filteredClass = "bestsellers";
+        filteredValue = "true";
+    } else if (categoryName === "sales") {
+        // Set the searched value to news
+        filteredClass = "sales";
+        filteredValue = "true";
+    }
+};
 
 // Sort products functions
 const sortProduct = () => {
@@ -51,14 +77,16 @@ const sortProduct = () => {
         };
         // Fill the grid
         document.getElementById("categoryProductGrid").innerHTML = ``; // clean the previos list
-        fillGrid("category", categoryName, "categoryProductGrid");
+        fillGrid(filteredClass, filteredValue, "categoryProductGrid");
     })
 };
 
 // Activate functions on page load
 window.addEventListener('load', (event) => {
+    // Select category
+    selectCategory();
     // Fill grid
-    fillGrid("category", categoryName, "categoryProductGrid");
+    fillGrid(filteredClass, filteredValue, "categoryProductGrid");
     // Set number of items in the shopping cart icon
     cartIconItem();
     // Add functionallity of buttons
