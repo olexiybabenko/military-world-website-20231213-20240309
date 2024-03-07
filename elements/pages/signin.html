@@ -118,49 +118,58 @@
 
 
     <!-- Fade modals - they are invisible until customer clicks on buy button of the product -->
-    <div id="fadeModals"></div>
+    <div id="fadeModals">
+        <!-- Modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content background-light-olive">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signInModalLabel">Sign in</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        This is a test web-page, so you can not sign in. Sorry 😊
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Main screen -->
-    <div class="container-xl px-3 px-md-5" style="max-width: 100%;">
-        <!-- Categories section -->
-        <div class="pt-3 pb-4">
-            <div class="text-center">
-                <a class="link-dark text-decoration-none" href="./categories.html">
-                    <h1 class="mb-2 mb-md-3">Categories</h1>
-                </a>
-                <div class="d-flex justify-content-center flex-wrap gap-1 gap-md-2 gap-lg-3 px-lg-3">
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0 text-nowrap" href="./clothing.html">Clothing</a>
-                        <img src="../images/categories/category-clothing.webp" class="card-img-bottom rounded-bottom"
-                            alt="...">
-                    </div>
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0 text-nowrap" href="./shoes.html">Shoes</a>
-                        <img src="../images/categories/category-shoes.webp"
-                            class="card-img-bottom rounded-bottom mw-100" alt="...">
-                    </div>
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0" href="./outdoor.html">Outdoor</a>
-                        <img src="../images/categories/category-outdoor.webp" class="card-img-bottom rounded-bottom"
-                            alt="...">
-                    </div>
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0" href="./safety.html">Safety</a>
-                        <img src="../images/categories/category-safety.webp" class="card-img-bottom rounded-bottom"
-                            alt="...">
-                    </div>
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0" href="./equipment.html">Equipment</a>
-                        <img src="../images/categories/category-equipment.webp" class="card-img-bottom rounded-bottom"
-                            alt="...">
-                    </div>
-                    <div class="col-3 col-lg-2 card h-100 bg-light border-secondary rounded card-width">
-                        <a class="card-title text-decoration-none py-0" href="./shooting.html">Shooting</a>
-                        <img src="../images/categories/category-shooting.webp" class="card-img-bottom rounded-bottom"
-                            alt="...">
+    <div class="container-xl px-3 px-md-5 pb-4" style="max-width: 100%;">
+        <h1 class="mb-2 mb-md-3 text-center pt-3">Sign-in</h1>
+        <!-- Container for Sign in box - this structure is required to use grid -->
+        <div class="container">
+            <div class="row justify-content-center mx-sm-3 mx-xl-5">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 bg-light border border-secondary rounded">
+                    <!-- Sign in box -->
+                    <div class="px-2">
+                        <!-- Email  -->
+                        <label for="exampleFormControlInput1" class="form-label mt-2">Email address</label>
+                        <input type="email" class="form-control border-secondary focus-ring focus-color-olive"
+                            id="exampleFormControlInput1" placeholder="name@example.com">
+                        <!-- Password  -->
+                        <label for="exampleFormControlInput2" class="form-label mt-3">Password</label>
+                        <input type="password" class="form-control border-secondary focus-ring focus-color-olive"
+                            id="exampleFormControlInput2" placeholder="Password">
+                        <p class="fw-light text-primary">Forgot password?</p>
+                        <!-- Sign in Button  -->
+                        <div class="d-flex justify-content-center mb-3">
+                            <button type="button"
+                                class="btn btn-dark background-olive btn-outline-light text-capitalize px-4"
+                                data-bs-toggle="modal" data-bs-target="#signInModal">
+                                Sign in
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <!-- Create an account text  -->
+                <p class="text-center text-secondary mt-1" data-bs-toggle="modal" data-bs-target="#signInModal">Create
+                    an account</p>
             </div>
         </div>
     </div>
@@ -264,7 +273,7 @@
 
 
     <!-- js file -->
-    <script type="module" src="../../js/products-page.js"></script>
+    <script type="module" src="../../js/no-swipers.js"></script>
     <!-- Bootstrap required elements -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
