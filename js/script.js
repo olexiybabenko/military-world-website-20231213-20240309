@@ -228,7 +228,7 @@ const searchProducts = () => {
             // for each filtered product
             for (let i = 0; i < filteredProducts.length; i++) {
                 let li = document.createElement("li"); // create the list element 
-                li.innerHTML = `<a class="dropdown-item" href=${"./" + filteredProducts[0].id + "_page.html"}>${filteredProducts[i].name}</a>`;
+                li.innerHTML = `<a class="dropdown-item text-wrap" href=${"./" + filteredProducts[0].id + "_page.html"}>${filteredProducts[i].name}</a>`;
                 document.getElementById('searchResultsDropdown').appendChild(li);
             }
         } else {

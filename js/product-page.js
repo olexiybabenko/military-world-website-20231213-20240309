@@ -7,9 +7,61 @@ let i = document.getElementById("productNumber").innerHTML - 1;
 
 // CREATE A FUNCTION TO FILL THE PRODUCT PAGE
 const fillProductPage = () => {
-    // Change the page's title
+    // 1. Change the page's title
     document.title = `${products_list[i].name}`;
-    // Fill the inner html of productPageMainSection
+    // 2. Add Fade modal modal
+    let fadeModal = document.createElement('div');
+    //Set attributes for each fade modal so that modal functionality works
+    let modalId = `${products_list[i].id + "-modal"}`; // this is required because 
+    fadeModal.setAttribute("id", modalId);
+    fadeModal.setAttribute("class", "modal fade");
+    fadeModal.setAttribute("tabindex", "-1");
+    fadeModal.setAttribute("aria-labelledby", "exampleModalLabel");
+    fadeModal.setAttribute("aria-hidden", "true");
+    // Content of the modal
+    fadeModal.innerHTML = `
+    <div class="modal-dialog">
+        <div class="modal-content background-light-olive">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-capitalize" id="exampleModalLabel">Shopping cart</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-evenly">
+                <div>
+                    <img src="${products_list[i].img}"
+                        class="card-width border border-secondary border-opacity-50" alt="Product image">
+                    <p class="fw-light text-danger remove-item" data-bs-dismiss="modal">Remove item</p>
+                </div>
+                <div class="ms-2">
+                    <a href=${"../pages/" + products_list[i].id + "_page.html"} class="card-title text-decoration-none">${products_list[i].name}</a>
+                    <p>$${products_list[i].price}</p>
+                    <div class="d-flex gap-1">
+                        <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded"
+                            value="1" aria-label=${products_list[i].id + "ItemQuantity"}>
+                        <select class="form-select form-select-sm" aria-label="Default select example">
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <h5>Total:</h5>
+                <h5>$${products_list[i].price * 1}</h5>
+            </div>
+            <div class="d-flex justify-content-center gap-1 pb-4">
+                <button type="button" class="btn btn-secondary text-capitalize" data-bs-dismiss="modal">more
+                </button>
+                <button type="button"
+                    class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</button>
+            </div>
+        </div>
+    </div>`;
+    // Append fade modal to the "fadeModals" section at the top of the main section
+    document.getElementById("fadeModals").appendChild(fadeModal);
+    // 3. Fill the inner html of productPageMainSection
     document.getElementById("productPageMainSection").innerHTML = `
         <!-- Breadcrumb -->
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
@@ -70,7 +122,7 @@ const fillProductPage = () => {
                         <option value="l">L</option>
                         <option value="xl">XL</option>
                     </select>
-                    <button id="-buy-btn" class="btn btn-dark background-olive btn-outline-light btn-buy">Buy</button>
+                    <button id="-buy-btn" class="btn btn-dark background-olive btn-outline-light btn-buy" data-bs-toggle="modal" data-bs-target=${"#" + products_list[i].id + "-modal"}>Buy</button>
                 </div>
                 <!-- Accordtion with description -->
                 <div class="accordion accordion-flush pt-3 pb-0" id="accordionExample">
