@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Sign in</title>
+    <title>Information</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../styles/main.css">
     <!-- Bootstrap -->
@@ -119,58 +119,83 @@
 
     <!-- Fade modals - they are invisible until customer clicks on buy button of the product -->
     <div id="fadeModals">
-        <!-- Modal -->
-        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content background-light-olive">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="signInModalLabel">Sign in</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        This is a test web-page, so you can not sign in. Sorry 😊
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 
     <!-- Main screen -->
     <div class="container-xl px-3 px-md-5 pb-4" style="max-width: 100%;">
-        <h1 class="mb-2 mb-md-3 text-center pt-3">Sign in</h1>
-        <!-- Container for Sign in box - this structure is required to use grid -->
-        <div class="container">
-            <div class="row justify-content-center mx-sm-3 mx-xl-5">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4 bg-light border border-secondary rounded">
-                    <!-- Sign in box -->
-                    <div class="px-2">
-                        <!-- Email  -->
-                        <label for="exampleFormControlInput1" class="form-label mt-2">Email address</label>
-                        <input type="email" class="form-control border-secondary focus-ring focus-color-olive"
-                            id="exampleFormControlInput1" placeholder="name@example.com">
-                        <!-- Password  -->
-                        <label for="exampleFormControlInput2" class="form-label mt-3">Password</label>
-                        <input type="password" class="form-control border-secondary focus-ring focus-color-olive"
-                            id="exampleFormControlInput2" placeholder="Password">
-                        <p class="fw-light text-primary">Forgot password?</p>
-                        <!-- Sign in Button  -->
-                        <div class="d-flex justify-content-center mb-3">
-                            <button type="button"
-                                class="btn btn-dark background-olive btn-outline-light text-capitalize px-4"
-                                data-bs-toggle="modal" data-bs-target="#signInModal">
-                                Sign in
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Create an account text  -->
-                <p class="text-center text-secondary mt-1" data-bs-toggle="modal" data-bs-target="#signInModal">Create
-                    an account</p>
-            </div>
+        <!-- About us -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">About us</h1>
+            <p class="text-justify">Military World was founded in 2024. Our store offers high-quality military and
+                tactical
+                garments. Our clients
+                can choose genuine surplus goods
+                from German, American, British, Dutch, Austrian, Polish, or Czech troops. We also provide equivalents of
+                genuine military garments, manufactured by, for example, Helikon-Tex, Mil-tec, Teesar or Texar. A wide
+                range
+                of camouflages meets all needs. <br><br>
+                We also carry military equipment in used or new condition. Moreover, there is a wide range of products
+                based
+                on military ones. We selected the best manufacturers, like Primus, Light My Fire, Berghaus, Esbit,
+                Glock,
+                Bushmen and so one. We suggest a large number of expedition, survival, and military backpacks, which are
+                available in various capacities and colours. Modular pouches, waist, and shoulder bags will help to
+                organize
+                your equipment.<br><br>
+                In addition, our store is rich in the finest outdoor clothes. The proper outfit will protect the user
+                from
+                freezing, soaking, winding, and overheating. The brands we offer meet the expectations of the most
+                demanding
+                customers, providing protection against most weather conditions.</p>
+        </div>
+        <!-- Contacts -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">Contacts</h1>
+            <p class="text-center"><span class="fw-semibold">E-mail: </span>info@militaryworld.pl<br>
+                <span class="fw-semibold">Phone number: </span>777 777 777<br>
+                <span class="fw-semibold">Full name: </span>Military World sp. z o.o<br>
+                <span class="fw-semibold">Address: </span>ul. Prosta 10, 01-011, Warszawa<br>
+            </p>
+        </div>
+        <!-- Terms and conditions -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">Terms & Conditions</h1>
+            <p class="text-center">Find the terms and conditions under the following <span
+                    class="fw-semibold fst-italic text-info">link</span>
+            </p>
+        </div>
+        <!-- Shipment -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">Shipment</h1>
+            <p class="text-justify">
+                Choose a product, go to the shopping cart and see how easy it is!
+
+                We currently don't ship to UK. We are working to resume shipments to the UK. We'll inform you as soon as
+                possible.
+                Depending on the selected country, different payment methods are available.
+
+                Shipping costs depend on the country of delivery and the total weight of the products ordered.
+                They are calculated automatically when you add products to the cart and select the country of delivery.
+                See what you can do if we do not offer shipping to <span class="fw-semibold fst-italic text-info">your
+                    country</span> .
+            </p>
+        </div>
+        <!-- Return policy -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">Return policy</h1>
+            <p class="text-center">
+                The Customer has the right of withdrawl from distance agreements without giving any reason by filling
+                out the <span class="fw-semibold fst-italic text-info">Return form</span> within 14 days and sending it
+                to us
+            </p>
+        </div>
+        <!-- FAQs -->
+        <div class="px-1">
+            <h1 class="mb-2 mb-md-3 text-center pt-3">FAQs</h1>
+            <p class="text-center">
+                Find the <span class="fw-semibold fst-italic text-info">guide</span> related to this topic
+            </p>
         </div>
     </div>
 
