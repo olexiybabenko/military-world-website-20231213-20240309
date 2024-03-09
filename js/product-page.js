@@ -54,8 +54,8 @@ const fillProductPage = () => {
             <div class="d-flex justify-content-center gap-1 pb-4">
                 <button type="button" class="btn btn-secondary text-capitalize" data-bs-dismiss="modal">more
                 </button>
-                <button type="button"
-                    class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</button>
+                <a href="./shopping-cart.html" type="button"
+                            class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</a>
             </div>
         </div>
     </div>`;

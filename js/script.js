@@ -55,9 +55,9 @@ const fillSwiper = (filter, filterData, swiperId) => {
                             <a href=${"../pages/" + products_list[i].id + "_page.html"} class="card-title text-decoration-none">${products_list[i].name}</a>
                             <p>$${products_list[i].price}</p>
                             <div class="d-flex gap-1">
-                                <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded"
+                                <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded focus-ring focus-color-olive"
                                     value="1" aria-label=${products_list[i].id + "ItemQuantity"}>
-                                <select class="form-select form-select-sm" aria-label="Default select example">
+                                <select class="form-select form-select-sm focus-ring focus-color-olive" aria-label="Default select example">
                                     <option value="s">S</option>
                                     <option value="m">M</option>
                                     <option value="l">L</option>
@@ -73,8 +73,8 @@ const fillSwiper = (filter, filterData, swiperId) => {
                     <div class="d-flex justify-content-center gap-1 pb-4">
                         <button type="button" class="btn btn-secondary text-capitalize" data-bs-dismiss="modal">more
                         </button>
-                        <button type="button"
-                            class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</button>
+                        <a href="./shopping-cart.html" type="button"
+                            class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</a>
                     </div>
                 </div>
             </div>`;
@@ -134,9 +134,9 @@ const fillGrid = (filter, filterData, gridId) => {
                             <a href=${"../pages/" + products_list[i].id + "_page.html"} class="card-title text-decoration-none">${products_list[i].name}</a>
                             <p>$${products_list[i].price}</p>
                             <div class="d-flex gap-1">
-                                <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded"
+                                <input id=${products_list[i].id + "ItemQuantity"} type="number" class="form-control form-control-sm rounded focus-ring focus-color-olive"
                                     value="1" aria-label=${products_list[i].id + "ItemQuantity"}>
-                                <select class="form-select form-select-sm" aria-label="Default select example">
+                                <select class="form-select form-select-sm focus-ring focus-color-olive" aria-label="Default select example">
                                     <option value="s">S</option>
                                     <option value="m">M</option>
                                     <option value="l">L</option>
@@ -152,8 +152,8 @@ const fillGrid = (filter, filterData, gridId) => {
                     <div class="d-flex justify-content-center gap-1 pb-4">
                         <button type="button" class="btn btn-secondary text-capitalize" data-bs-dismiss="modal">more
                         </button>
-                        <button type="button"
-                            class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</button>
+                        <a href="./shopping-cart.html" type="button"
+                            class="btn btn-dark background-olive btn-outline-light text-capitalize">checkout</a>
                     </div>
                 </div>
             </div>`;
@@ -240,7 +240,23 @@ const searchProducts = () => {
     });
 };
 
-
+// 5) Calculate total price if exists
+const calculateTotalPrice = () => {
+    // Define the calculateTotalPriceButton
+    let calculateTotalPriceButton = document.getElementById("calculateTotalPrice");
+    // If calculateTotalPriceButton exists - add event listener to it
+    if (calculateTotalPriceButton) {
+        document.getElementById('calculateTotalPrice').addEventListener('click', () => {
+            // Define product prices and quantities
+            let product_1Price = document.getElementById("product_1Price").innerHTML; // Product_1 price
+            let product_1ItemQuantity = document.getElementById("product_1ItemQuantity").value; // Product_1 quantity
+            let product_2Price = document.getElementById("product_2Price").innerHTML; // Product_2 price
+            let product_2ItemQuantity = document.getElementById("product_2ItemQuantity").value; // Product_1 quantity
+            // Change innerHTML of Total field
+            document.getElementById("totalPrice").innerHTML = `${product_1Price * product_1ItemQuantity + product_2Price * product_2ItemQuantity}`
+        })
+    }
+};
 
 // EXPORT FUNCTIONS
-export { fillSwiper, fillGrid, cartIconItem, addItemToCart, removeItemFromCart, searchProducts };
+export { fillSwiper, fillGrid, cartIconItem, addItemToCart, removeItemFromCart, searchProducts, calculateTotalPrice };
