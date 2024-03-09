@@ -208,6 +208,8 @@ const removeItemFromCart = () => {
 
 // 4) Search function
 const searchProducts = () => {
+    // Populate the search results with "Search" - this is required so that there is no empty dropdown list visible when there is no search term
+    document.getElementById('searchResultsDropdown').innerHTML = `<li class="px-2">Search...</li>`;
     // Add event listener: on searchButton click -> search the products_list
     document.getElementById('searchButton').addEventListener('click', () => {
         // Choose the value of the form
